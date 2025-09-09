@@ -61,4 +61,4 @@ keycloak/         # Keycloak Docker setup and realm config
 MIT
 
 ## Author
-Your Name
+Siddharth Baichoo + Chat gpt (1 hour)
