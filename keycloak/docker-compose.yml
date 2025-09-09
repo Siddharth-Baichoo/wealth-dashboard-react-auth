@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0
+    command: ["start-dev", "--import-realm", "--http-port", "8070"]  # 👈 add this
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "8070:8070"
+    volumes:
+      - ./realm-export-fintech.json:/opt/keycloak/data/import/realm-export-fintech.json:ro
